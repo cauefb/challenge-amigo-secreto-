@@ -13,3 +13,13 @@ function adicionarAmigo() {
     listarAmigos()
     nome.value = ''
   }
+
+  function listarAmigos() {
+    lista.innerHTML = ''
+    for (let i = 0; i < amigos.length; i++) {
+      let item = document.createElement("li")
+      let amigo = document.createTextNode(amigos[i])
+      item.appendChild(amigo)
+      lista.appendChild(item)
+    }
+  }  
