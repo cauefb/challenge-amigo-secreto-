@@ -23,3 +23,15 @@ function adicionarAmigo() {
       lista.appendChild(item)
     }
   }  
+
+  function sortearAmigo() {
+    if (amigos.length <= 0) {
+      alert('Cadastre alguns amigos antes de sortear!')
+      return
+    }
+  
+    let numero = Math.floor(Math.random() * amigos.length)
+    let amigosSorteado = amigos[numero]
+    resultado.innerHTML = ''
+    resultado.innerHTML = `<li>O amigo secreto sorteado é: ${amigosSorteado}</li>`
+  }
